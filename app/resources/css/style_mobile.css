@@ -1,0 +1,1252 @@
+/*Css für alle Bildschirmgrößen die kleiner als 1025px sind, also vor allem handys und Tablets*/
+@media (max-width:539px) {
+    html {
+        overflow: scroll;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        margin: 0;
+        background: #222222;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition-duration: 0ms;
+    }
+
+    h1 {
+        height: 5vh;
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Candara Light';
+        font-size: 3.6vh;
+        background-color: #111;
+        color: rgb(255, 255, 255);
+    }
+
+    h2 {
+        height: 4vh;
+        font-size: 4vh;
+        margin-bottom: 2vh;
+        margin-top: 1vh;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+    h3 {
+        width:65vw;
+        height: 3vh;
+        font-size: 3vh;
+        text-align: center;
+        display: flex;
+        color: rgb(255, 255, 255);
+    }
+    h4 {
+        width:65vw;
+        height: 6vh;
+        margin-top: 1vh;
+        margin-bottom: 4vh;
+        font-size: 3vh;
+        text-align: center;
+        display: flex;
+        color: rgb(255, 255, 255);
+    }
+
+    h6 {
+        top: 2vh;
+        bottom: 2vh;
+        width:65vw;
+        height: 3vh;
+        margin-top: 3vh;
+        margin-bottom: 5vh;
+        font-size: 3vh;
+        text-align: left;
+        display: flex;
+        color: rgb(255, 255, 255);
+    }
+
+    .checkbox-position {
+        margin-left: 10%;
+    }
+
+    .text-input {
+        width: 45vw;
+        height: 4vw;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        align-items: center;
+        display: flex;
+        color: rgb(255, 255, 255);
+    }
+
+    .checkbox {
+        width: 2vh;
+        height: 2vh;
+        margin-top: 0.8vh;
+        margin-right: 2vw;
+    }
+
+    .button {
+        height: 20vw;
+        width: 80vw;
+        margin-top: 10%;
+        background-color: green;
+        border-radius: 25vw;
+        box-shadow: 0 10px 20px -4px #0F0F0F;
+        font-size: 6vw;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    button:hover {
+        box-shadow: 0px 14px 20px -8px #0F0F0F;
+        transform: scale(1.02);
+    }
+
+    button:active {
+        box-shadow: 0px 5px 10px 0px #0F0F0F;
+        transform: scale(0.98);
+    }
+
+    .clickBtns {
+        cursor: pointer;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .disappear {
+        transition-duration: 2s;
+        transform: scale(0.01);
+        pointer-events: none;
+    }
+
+    .error-background {
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        align-items: center;
+        background-color: #424242;
+        opacity: 0.5;
+        position: absolute;
+        position: 0, 0;
+        top: 0;
+    }   
+
+    .selection {
+        border-color: #d4793c;
+        border-width: 1vh;
+    }
+
+    /*Animation of the succesful login screen*/
+    .animated-button {
+        display: block;
+        place-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .buttonHighlight {
+        position: absolute;
+        height: 60vw;
+        width: 60vw;
+        border-radius: 50%;
+        top: -3px;
+        left: -1px;
+        border: 5px solid #222;
+        border-left-color: white;
+        z-index: 3;
+    }
+
+    .highlight-animation {
+        animation: rotate 1s ease-in-out 1;
+    }
+
+    @keyframes rotate {
+        50% {
+            border-left-color: white;
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #animatedDiv {
+        transition: all 1s cubic-bezier(0.71, 0.08, 0.39, 1.03);
+    }
+
+    .disappear-animation {
+        transform: scale(0%);
+    }
+
+    .button-round {
+        position: relative;
+        height: 60vw;
+        width: 60vw;
+        z-index: 2;
+        border: none;
+        border-radius: 50%;
+        background-color: green;
+    }
+
+    .check {
+        height: 20vw;
+        width: 10vw;
+        position: absolute;
+        z-index: 3;
+        content: "";
+        top: 30vw;
+        left: 19vw;
+        transform: scaleX(-1) rotate(135deg);
+        border-top: 4px solid white;
+        border-right: 4px solid white;
+        transform-origin: left top;
+    }
+
+    .check-animation {
+        animation: check-icon 0.8s ease;
+    }
+
+    @keyframes check-icon {
+        0% {
+            height: 0;
+            width: 0;
+            opacity: 1;
+        }
+
+        40% {
+            height: 0;
+            width: 10vw;
+            opacity: 1;
+        }
+
+        80% {
+            height: 20vw;
+            width: 10vw;
+            opacity: 1;
+        }
+
+        100% {
+            height: 20vw;
+            width: 10vw;
+            opacity: 1;
+        }
+    }
+
+    /*start Playlist view elemente*/
+    .card {
+        height: 60vh;
+        width: 90vw;
+        box-shadow: 0 4px 8px 0 #0F0F0F;
+        transition: 0.3s;
+        padding: 8%;
+        background-color: #333;
+        border-radius: 3%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 #0F0F0F;
+    }
+
+    .buttonStart {
+        height: 5vh;
+        width: 58vw;
+        background-color: green;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 12vw;
+        box-shadow: 0 7px 14px -4px #0F0F0F;
+        font-size: 5vw;
+        color: rgb(255, 255, 255);
+        cursor: grab;
+    }
+    .buttonStart:disabled {
+        background-color: #222;
+        color: gray;
+    }
+
+    .settingsIcon {
+        height: 3vh;
+        width: 3vh;
+        cursor: grab;
+        margin-left: auto; 
+        margin-right: 5vw;
+        display:flex;
+        margin-top: 0.4vh;
+    }
+
+    /*swipe screen view elemente*/
+    .counter {
+        margin-top: .7vh;
+        text-align: center;
+        font-size: 4vh;
+    }
+
+    .animateCounter {
+        animation: bigSmall .7s ease-in-out 1;
+    }
+
+    @keyframes bigSmall {
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1.0);
+        }
+    }
+
+    .tinder .center {
+        padding-top: 1vh;
+        width: 90vw;
+        height: 60vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
+    }
+
+    .loaded.tinder {
+        opacity: 1;
+    }
+
+    .tinder--cards {
+        flex-grow: 1;
+        padding-top: 56vh;
+        padding-bottom: 1%;
+        text-align: center;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: flex-end;
+        z-index: 1;
+    }
+
+    .tinder--card {
+        display: inline-block;
+        width: 80vw;
+        max-width: 700px;
+        height: 55vh;
+        background: #333;
+        border-radius: 6vw;
+        overflow: hidden;
+        position: absolute;
+        will-change: transform;
+        transition: all 0.3s ease-in-out;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+        box-shadow: 0 1vw 2vw 0 #0F0F0F;
+    }
+
+    .moving.tinder--card {
+        transition: none;
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+        overflow: hidden;
+    }
+
+    .tinder--card img {
+        margin-top: 4%;
+        max-height: 30vh;
+        max-width: 30vh;
+        pointer-events: none;
+    }
+
+    .tinder--card h3 {
+        font-size: 5vw;
+        pointer-events: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .tinder--card p {
+        font-size: 5vw;
+        pointer-events: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .swipe-screen-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dislike-like-buttons {
+        padding-top: 0.5vh;
+        padding-bottom: 1%;
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .likeButton {
+        width: 17vw;
+        height: 17vw;
+        padding-left: 5vw;
+        cursor: pointer;
+    }
+
+    .dislikeButton {
+        width: 17vw;
+        height: 17vw;
+        padding-right: 5vw;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+    .disguised{
+        opacity: 0;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttonEndPlaylist {
+        height: 5vh;
+        width: 58vw;
+        background-color: #111;
+        border-radius: 12vw;
+        font-size: 3vh;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        border: none;
+        outline: none;
+        bottom: 13vh;
+        position: absolute;
+        left: 21vw;
+        box-shadow: .2vh .3vh .8vh .5vh #1a1a1a;
+    }
+
+    .buttonEndPlaylist:before {
+        content: '';
+        background: linear-gradient(45deg, #c01c1c, #ef6c2b, #fcbc35, #7c9c2f, #14c734, #2befef, #14c734, #7c9c2f, #fcbc35, #ef6c2b, #c01c1c);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 800%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 30s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 12vw;
+    }
+    
+    .buttonEndPlaylist:hover:before {
+        opacity: 1;
+    }
+
+    .buttonEndPlaylist:after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 12vw;
+    }
+
+    /*Icon bar details*/
+    .icon-bar {
+        width: 100vw;
+        background-color: #111;
+        position: absolute;
+        bottom: 0vh;
+        display: block;
+    }
+
+    #statistics-screen {
+        overflow: scroll;
+        height: 87vh;
+    }
+
+    .icon-bar img {
+        float: left;
+        text-align: center;
+        width: 10vw;
+        height: 10vw;
+        margin-left: 8.66vw;
+        margin-right: 8.66vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        border-radius: 25%;
+        transition: all 0.3s ease;
+        color: rgb(255, 255, 255);
+    }
+
+    .icon-bar img:active {
+        transform: scale(0.9);
+    }
+
+    .active {
+        background-color: rgba(236, 188, 133, 0.096);   
+        transform: scale(0.9);
+    }
+
+    .history--widgets {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        width: 100vw;
+        margin: 2vh auto;
+        padding: 0 0 0 0;
+        list-style-type: none;
+    }
+
+    .history-widgets {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        max-width: 80vw;
+        height: 20vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        margin-bottom: 3vw;
+        background-color: #333;
+        border-radius: 3vw;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        color: var(--foreground);
+    }
+
+    #cover-history {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        display: block;
+        margin: 0 auto;
+        height: 16vw;
+        width: 16vw;
+        border-radius: 50%;
+    }
+
+    #cover-liked {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        display: block;
+        margin: 0 auto;
+        height: 16vw;
+        width: 16vw;
+        border-radius: 50%;
+    }
+
+    ul::-webkit-scrollbar {
+        width: 5px;
+        height: auto;
+        display: block;
+        overflow-y: scroll;
+    }
+
+    ul {
+        overflow-y: scroll;
+    }
+
+    #history-widget-list {
+        width: 100%;
+        position: absolute;
+        top: 11vh;
+        left: 10vw;
+        bottom: 12vw;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .play-history {
+        padding-top: 1vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        padding-bottom: 1vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .delete-history {
+        padding-top: 1vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        padding-bottom: 1vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .history-data {
+        width: 40vw;
+        max-width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .history-liked-data{
+        width: 33vw;
+        max-width: 33vw;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    #Song-interpret-history {
+        padding-top: 2vw;
+        width: 40vw;
+        max-width: 40vw;
+        max-height: 7vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 6vw;
+        color: rgb(155, 139, 129);
+    }
+
+    #Song-interpret-liked {
+        padding-top: 2vw;
+        width: 40vw;
+        max-width: 40vw;
+        max-height: 7vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 6vw;
+        color: rgb(155, 139, 129);
+    }
+
+    #Song-title-history {
+        padding-top: 2vw;
+        max-width: 40vw;
+        width: 40vw;
+        max-height: 7vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 6vw;
+        color: rgb(255, 255, 255);
+    }
+
+    #Song-title-liked {
+        padding-top: 2vw;
+        max-width: 40vw;
+        width: 40vw;
+        max-height: 7vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 6vw;
+        color: rgb(255, 255, 255);
+    }
+
+    .history-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        right: 0vh;
+    }
+
+    .history-buttons {
+        cursor: pointer;
+    }
+
+    .sort-dropdown-menu {
+        float: left;
+        overflow: hidden;
+    }
+
+    .sort-dropdown-menu .dropdown-btn {
+        width: 5vh;
+        height: 5vh;
+        cursor: pointer;
+        font-size: 15vw;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 1vh;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .sort-dropdown-menu:hover .dropdown-btn,
+    .dropdown-btn:focus {
+        background-color: #333;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #111;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content p {
+        float: none;
+        color: white;
+        background-color: #111;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content p:hover {
+        background-color: #333;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .total-songcount {
+        margin-top: 3vh;
+        background-color: #222;
+        font-size: 4vh;
+        display: block;
+        text-align: center;
+        width: 100vw;
+    }
+
+    #song-count {
+        margin-top: 3vh;
+        background-color: #333;
+        font-size: 4vh;
+        border-radius: 3vh;
+    }
+
+    .favorite-genre-container {
+        margin-top: 3vh;
+        background-color: #222;
+        font-size: 4vh;
+        margin-bottom: 5vh;
+        display: block;
+        width: 100vw;
+        text-align: center;
+    }
+
+    #favorite-genre {
+        margin-top: 3vh;
+        background-color: #333;
+        border-radius: 3vh;
+        font-size: 4vh;
+    }
+
+    .doughnut-charts {
+        width: 100vw;
+        display: block;
+        height: 165vh;
+        overflow: hidden;
+    }
+
+    .left-right-doughnut {
+        background-color: #222;
+        margin-bottom: 5vh;
+        margin-left: 5vw;
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .akustic-electronic-doughnut {
+        background-color: #222;
+        margin-bottom: 5vh;
+        margin-left: 5vw;
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .instrumental-vocal-doughnut {
+        background-color: #222;
+        margin-left: 5vw;
+        width: 90vw;
+        margin-bottom: 5vh;
+        height: 50vh;
+    }
+
+
+    .danceability-container {
+        margin-bottom: 5vh;
+        margin-left: 4vw;
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #dancer {
+        width: 27vw;
+        height: 27vw;
+    }
+
+    #danceability-text {
+        height: 27vw;
+        width: 63;
+        margin-left: 2vw;
+        margin-right: 1vw;
+        font-size: 7vw;
+        color: rgb(255, 255, 255);
+    }
+
+    #danceability-metric {
+        font-size: 8vw;
+        background-color: #333;
+        border-radius: 3vh;
+    }
+
+    .genre-swipe-rate-container {
+        background-color: #222;
+        margin-bottom: 5vh;
+        margin-top: 2vh;
+        margin-left: 2.5vw;
+        width: 95vw;
+        height: 40vh;
+    }
+
+    .not-displayed {
+        display: none;
+    }
+
+    .genre-title {
+        color: #d4793c;
+        background: transparent;
+        padding-left: 2vw;
+        font-style: normal;
+        font-size: 3.5vh;
+    }
+
+    .playlist-title {
+        color: #d4793c;
+        background: transparent;
+        padding-left: 2vw;
+        font-style: normal;
+        font-size: 3.5vh;
+    }
+
+    .current-playlist-marker {
+        color: #555;
+        background: transparent;
+        padding-left: 2vw;
+        font-style: normal;
+        font-size: 3vh;
+    }
+
+    .playlist-play {
+        padding-right: 3vw;
+        height: 3vh;
+    }
+
+    .playlist-pause {
+        padding-right: 3vw;
+        height: 3vh;
+    }
+
+    .pause-history {
+        padding-top: 1vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        padding-bottom: 1vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .addToPlaylist-history {
+        padding-top: 6vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        padding-bottom: 1vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .history-template-buttons{
+        width: 20vw;
+        margin-left: auto; 
+        margin-right: 2vw;
+        display:flex;
+        flex-direction: row;
+    }
+
+    #playlist-selection {
+        height:0vh
+    }
+
+    #list-selection {
+        margin-top:2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .playlist-nav-btns {
+        font-size: 3vh;
+        margin: 1vw;
+        cursor: pointer;
+    }
+
+    .active-nav-btn {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .song-control-btns {
+        height:8vw;
+        margin-top:6vw;
+        margin-left: 2.5vw;
+        cursor: pointer;
+    }
+
+    .song-trash-control-btns {
+        height:8vw;
+        margin-top:6vw;
+        margin-left: 4vw;
+        cursor: pointer;
+    }
+
+    .song-controls {
+        margin-left: 1vw;
+    }
+
+    #playlist-selection-list {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 0%;
+    }
+
+    .song-widgets {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        max-width: 80vw;
+        margin: auto;
+        height: 20vw;
+        margin-bottom: 2vh;
+        border-radius: 2vh;
+        background-color: #333;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        color: var(--foreground);
+    }
+
+    .playlist-widgets {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        max-width: 80vw;
+        margin: auto;
+        height: 20vw;
+        margin-bottom: 2vh;
+        border-radius: 2vh;
+        background-color: #333;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        color: var(--foreground);
+    }
+
+    #name-container {
+        display: flex;
+        align-content: flex-start;
+        padding-left: 2vw;
+        max-width: 50vw;
+        margin-right: 9vw;
+        width: 50vw;
+    }
+
+    .playlist-name-input {
+        margin: auto;
+        margin-top: 6vw;
+        width: 10vw;
+        text-align: left;
+        max-width: 55vw;
+        width: 55vw;
+        max-height: 8vw;
+        height:8vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 6vw;
+        background-color: #555;
+        color: rgb(255, 255, 255);
+        margin-left:3vw;
+        line-height: 0%;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+    }
+
+    .playlist-name-input::-webkit-input-placeholder {
+        font-size: 4vw;
+        margin-left: 4vw;
+        padding-bottom: 5vw;
+    }
+
+    #playlist-name{
+        margin: auto;
+        margin-top: 7vw;
+        margin-left:3vw;
+        width: 55vw;
+        text-align: left;
+        max-width: 55vw;
+        max-height: 8vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 6vw;
+    }
+
+    #selection-finished-btn {        
+        height: 6vh;
+        width: 60vw;
+        border-radius: 24vh;
+        font-size: 2.5vh;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        border: none;
+        outline: none;
+        bottom: 3vh;
+        left: 20vw;
+        position: absolute;
+        box-shadow: 0 10vw 20vw -6vw #000000;
+    }
+    .ul-list-scroll{
+        position: absolute;
+        top:13vh;
+        bottom:0vh;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding-bottom: 8vh;
+    }
+
+    #choose-playlist {
+        padding-right: 2vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .check-mark{
+        padding-right: 2vw;
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .selection-controls {
+        height: 12vh;
+        width: 25vw;
+        margin-left: auto; 
+        display:flex;
+        flex-direction: row;
+    }
+
+    .glow-on-hover {
+        z-index: 0;
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #c01c1c, #ef6c2b, #fcbc35, #7c9c2f, #14c734, #2befef, #14c734, #7c9c2f, #fcbc35, #ef6c2b, #c01c1c);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 800%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 30s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 24vh;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: green;
+        box-shadow: 6px 5px 16px 4px #0000006e;
+        left: 0;
+        top: 0;
+        border-radius: 24vh;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+  }
+  
+  /* Used for start screen layout buttons */
+    .row {
+        display: inline-flex;
+        flex-direction: row;
+    }
+      
+    .column {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .gamemodeBtns {
+        width: 40.5vw;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        opacity: 0.35;
+    }
+
+    .gameModeBtnsReady {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .game-modes{
+        margin-top: 4vh;
+        margin-bottom: 5vh;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 5.5vh;
+    }
+
+    .start-screen{
+        height: 45vh;
+        width: 90vw;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    /* Toast messages */
+    :root{
+        --toast-pos: 6.5vh;
+        --toast-end: 3vh;
+    }
+
+    #toast {
+        visibility: hidden;
+        min-width: 200px;
+        height: auto;
+        background-color: #333;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        border-radius: 15px;
+        top: var(--toast-pos);
+        padding: 1.9vh 1.8vw;
+        position: fixed;
+        z-index: 10;
+        font-size: 17px;
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: .15vh .3vh 1vh .45vh rgba(22, 22, 22, 0.486);
+      }
+
+    #toast.show-toast {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {top: var(--toast-end); opacity: 0;} 
+        to {top: var(--toast-pos); opacity: 1;}
+    }
+
+    @keyframes fadein {
+        from {top: var(--toast-end); opacity: 0;}
+        to {top: var(--toast-pos); opacity: 1;}
+    }
+
+    @-webkit-keyframes fadeout {
+        from {top: var(--toast-pos); opacity: 1;} 
+        to {top: var(--toast-end); opacity: 0;}
+    }
+
+    @keyframes fadeout {
+        from {top: var(--toast-pos); opacity: 1;}
+        to {top: var(--toast-end); opacity: 0;}
+    }
+
+    #toast.swipe-toast {
+        visibility: visible;
+        -webkit-animation: fadeinSwipe 0.5s, fadeoutSwipe 0.6s 3.5s;
+        animation: fadeinSwipe 0.5s, fadeoutSwipe 0.6s 3.5s;
+    }
+
+    @-webkit-keyframes fadeinSwipe {
+        from {top: var(--toast-end); opacity: 0;} 
+        to {top: var(--toast-pos); opacity: 1;}
+    }
+    
+    @keyframes fadeinSwipe {
+        from {top: var(--toast-end); opacity: 0;}
+        to {top: var(--toast-pos); opacity: 1;}
+    }
+    
+    @-webkit-keyframes fadeoutSwipe {
+        from {top: var(--toast-pos); opacity: 1;} 
+        to {top: var(--toast-end); opacity: 0;}
+    }
+    
+    @keyframes fadeoutSwipe {
+        from {top: var(--toast-pos); opacity: 1;}
+        to {top: var(--toast-end); opacity: 0;}
+    }
+
+    #toast.error-toast{
+        background-color: rgb(156, 0, 0);
+    }
+
+    .errorButton{
+        position: absolute;
+        top: 43vh;
+        left: 10vw;
+        width: 80vw;
+        border-radius: 5vh;
+        background-color: green;
+        font-size: 5vh;
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        z-index: 100;
+    }
+}

@@ -1,0 +1,26 @@
+# Features für Songs Tindern
+
+| Feature | Beschreibung | Priorität | Geschätzter Aufwand | Betroffene Schichten |
+|---------|--------------|-----------|--------------------|---------------------|
+| **Song erscheint und wird abgespielt** | Der Nutzer sieht eine Karte mit dem Cover, Titel und Interpret während der Song abgespielt wird und hat die Möglichkeit, die Karte entweder nach rechts (zum Liken) oder nach links (zum Disliken) zu swipen (Alternativ zum swipen kann man auch Buttons oder die Pfeiltasten verwenden).  | kritisch | 4 Tage | UI, Javascript, API | 
+| **Anmeldung** | Bevor ge-songtindert werden kann, muss der Nutzer sich bei Spotify anmelden. | kritisch | 1 Tag | API | 
+| **Speichern von Songs in einer Playlist** | Nach rechts gewischte (gelikte) Songs werden zwischengespeichert. Nach Drücken auf "End Playlist" erscheint der Bildschirm zum Hinzufügen zu Spotify Playlists. Hier kann der Nutzer neue Spotify-Playlists auf seinem Spotify-Profil erstellen und die gelikten Songs dazu hinzufügen. Außerdem werden dem Nutzer die zuvor in der App erstellten Playlist angezeigt, zu denen die gelikten Sngs auch hinzugefügt werden können. | kritisch | 3 Tage | API, UI, Javascript | 
+| **Game Modes** | Der Nutzer hat die Option zwischen vier verschiedenen Spielmodi zu wählen. **Normal Mode**: Dem Nutzer werden alle Details eines Songs angezeigt und er hat keinen Timer. **Hidden Mode**: Dem Nutzer wird der Titel, der Interpret und das Cover verheimlicht, damit er nicht voreingenommen ist. Außerdem läuft ein Timer von 25 Sekunden, nach dessen Ablauf der Song automatisch gedisliket wird. **Random Mode**: Der Nutzer kann ganz normal swipen, jedoch wird in zufälligen Abständen ein Timer von acht Sekunden gestellt. **Hard Mode**: Jeder Song hat einen Timer von sieben Sekunden und der Nutzer kann nicht zu einer zufälligen Stelle skippen. | hoch | 3 Tage | UI, Javascript | 
+| **Song History** | Alle jemals gelikten Songs sind in einer History verfügbar und können von dort aus abgespielt, aus dem LocalStorage gelöscht und zu der aktuellen Playlist hinzugefügt werden.  | hoch | 1 Tag | UI, API, LocalStorage | 
+| **Sortieren der gelikten Songs** | Die History kann nach veschiedenen Kriterien (Genre, Interpreten, Titel, zuletzt geswiped, Playlist) sortiert werden. Aus einem Genre/ Interpreten kann eine Playlist erstellt werden. | nice-to-have | 1 Tag | UI, LocalStorage, API, Javascript | 
+| **Springen** | Beim Doppelklicken auf die Songkarte wird an eine zufällige Stelle im Song gesprungen. | niedrig | 1 Tag | UI, JavaScript | 
+| **Statistiken** | Der Nutzer bekommt in Donut-Diagrammen angezeigt, zu welchem Anteil gelikt/gedislikt wurde, ob die gelikten Songs eher electronisch oder acoustisch waren oder ob die gelikten Songs eher vocal oder instrumental sind. Außerdem wird dem Nutzer ein Gif und eine Zahl für die "danceability" der gelikten Songs angezeigt. Darüberhinaus wird für die vier am öftesten gelikten Genres angezeigt zu wie viel Prozent diese geliked wurden. | nice-to-have | 2 Tage | API, LocalStorage, UI | 
+
+## Umsetzung
+
+Wir entwickeln die folgenden vertical slices in der angegeben Reihenfolge:
+- Anmeldefunktionalität (Anmeldung über Spotify, Kommunikation mit API, Speichern der Tokens)
+- Swipefunktionalität (UI-Animation, Songs abrufen und abspielen, Song-Details anzeigen, Liken/Disliken)
+- Speichern der gelikten Songs (Speichern in Storage, Abfrage aller Songs, Hinzufügen zu Playlist + Playlist erstellen)
+- History-Funktionalität (Abfrage aus Storage, Anzeige der Songs, Sortieren nach Playlists)
+- GameModes (Verstecken von Informationen, Countdown, Springen in Songs)
+- Statistik-Funktionalität (Zusammenfassung der Like-Rate, Ausrechnen der danceability und der Top Genres)
+- Weitere History-Funktionalität (Abspielen von Songs, sortieren von Songs, löschen aus Storage)
+- Detailliertere Playlist Selection (Anzeigen von bisher erstellten Playlists, gelikten Songs, Abspielen von einzelnen Songs)
+
+Die Anmeldung bei Spoitfy wird für alle weiteren Funktionen benötigt, daher muss diese zuerst implementiert werden. Der Kern der Anwendung ist das Entdecken neuer Musik, daher sollte dann schnell diese Funktion implementiert werden, der Rest baut darauf auf. Der nächste logische Schritt ist es, dass die Informationen über gelikte Songs nicht verloren geht, daher sollte dann die lokale Speicherung so wie die Speicherung in Playlists entwickelt werden. Die History-Funktionalität ist eine Erweiterung der vorgehenden, da dadurch die Information auch in der Anwendung weiter verwendet werden. Daraufhin folgen weitere Elemente, die die Entscheidung betonen, um die gewählte Interaktion weiter zu rechtfertigen und die Entdeckung von Songs von weiteren Biases zu befreien. Daraufhin arbeiten wir an der Implementierung von GammeModes, da diese den Game-Charakter unserer Anwendung unterstreichen. Danach implementieren wir die Statistik-Funktionalität, die dem Nutzer einen besseren Einblick darüber gibt, welche Art von Songs gelikt werden. Wenn die Zeit es zulässt, dann erwitern wir anschließend die History mit weiteren sinnvollen Funktionen. Zudem besteht die Möglichkeit, die Playlist Selection noch mit weiteren Funktionen zu verbessern.
