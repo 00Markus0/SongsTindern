@@ -48,7 +48,8 @@ class AppServer {
       next();
   });
 
-  this.app.use("/app", express.static(this.appDir));
+  this.app.use("", express.static(this.appDir));
+  //this.app.use("/app", express.static(this.appDir));
 }
 
   /**
