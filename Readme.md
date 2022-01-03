@@ -1,3 +1,3 @@
 # Songs Tindern
 
-Checkout our very cool app: https://www.songs-tindern.herokuapp.com/
+Checkout our very cool app: https://songs-tindern.herokuapp.com/
