@@ -13,7 +13,7 @@ For more information (in german) about how to use the app check out [this](docs/
 ## Use Example
 
 ## Team
-*Songs Tindern* was developed by
+*Songs Tindern* was developed as a project at the University of Regensburg (Chair for Media Informatics) by
 | Bild | Infos |
 |:--------------------------:|:--------------------------------------------------------------------|
 |<img src="docs/images/markus.jpg" width="80" height="80"> | Markus Schmidbauer <br> Github: 00Markus0 <br> E-Mail: markus.schmidbauer@stud.uni-regensburg.de |
