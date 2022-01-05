@@ -8,5 +8,14 @@ Currently the app is still in review by Spotify and therefore only few users, wh
 
 The app is avaiable under: https://songs-tindern.herokuapp.com/
 
+For more information (in german) about how to use the app check out [this](docs/Description.md) extensive description.
+
 ## Use Example
 
+## Team
+*Songs Tindern* was developed by
+| Bild | Infos |
+|:--------------------------:|:--------------------------------------------------------------------|
+|<img src="docs/images/markus.jpg" width="80" height="80"> | Markus Schmidbauer <br> Github: 00Markus0 <br> E-Mail: markus.schmidbauer@stud.uni-regensburg.de |
+|<img src="docs/images/annika.jpg" width="80" height="80"> | Annika Köhler <br> Github: 4nn1k4 <br> E-Mail: annika.koehler@stud.uni-regensburg.de |
+|<img src="docs/images/jannik.jpeg" width="80" height="80"> | Jannik Wiese <br> Github: ragor114 <br> E-Mail: jannik.wiese@stud.uni-regensburg.de |
