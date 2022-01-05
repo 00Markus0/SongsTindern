@@ -144,7 +144,7 @@ class Toast {
         if(skipsLeft <= 0) {
             sendToast("No more skips left", true);
         } else {
-            let msg = "Skips left: " + skipsLeft;
+            let msg = "Skips left: " + (skipsLeft-1);
             sendToast(msg, true);
         }
     }
