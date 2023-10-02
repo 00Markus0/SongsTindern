@@ -17,6 +17,6 @@ For more information (in german) about how to use the app check out [this](docs/
 *Songs Tindern* was developed as a project at the University of Regensburg (Chair for Media Informatics) by
 | Bild | Infos |
 |:--------------------------:|:--------------------------------------------------------------------|
-|<img src="docs/images/markus.jpg" width="80" height="80"> | Markus Schmidbauer <br> Github: 00Markus0 <br> E-Mail: markus.schmidbauer@stud.uni-regensburg.de |
-|<img src="docs/images/annika.jpg" width="80" height="80"> | Annika Köhler <br> Github: 4nn1k4 <br> E-Mail: annika.koehler@stud.uni-regensburg.de |
-|<img src="docs/images/jannik.jpeg" width="80" height="80"> | Jannik Wiese <br> Github: ragor114 <br> E-Mail: jannik.wiese@stud.uni-regensburg.de |
+|<img src="docs/images/markus.jpg" width="80" height="80"> | Markus Schmidbauer <br> Github: 00Markus0 <br> E-Mail: markus.schmidbauer@stud.uni-regensburg.de <br> Current E-Mail: m.schmidbauer@campus.lmu.de |
+|<img src="docs/images/annika.jpg" width="80" height="80"> | Annika Köhler <br> Github: 4nn1k4 <br> E-Mail: annika.koehler@stud.uni-regensburg.de <br> Current E-Mail: annika.koehler@campus.lmu.de |
+|<img src="docs/images/jannik.jpeg" width="80" height="80"> | Jannik Wiese <br> Github: ragor114 <br> E-Mail: jannik.wiese@stud.uni-regensburg.de <br> Current E-Mail: jannik.wiese@campus.lmu.de  |
